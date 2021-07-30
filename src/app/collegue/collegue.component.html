@@ -1,1 +1,20 @@
 <p>collegue works!</p>
+<div>
+    <img class="img-thumbnail" src="img.jpg" alt="Une image">
+    <div>
+        <p>Matricule: {{col.matricule}}</p>
+        <p>Nom: {{col.nom}}</p>
+        <div>
+            <p>Prénoms:</p>
+            <tr *ngFor="let prenom of col.prenoms">
+                <td>{{ prenom }}</td>
+            </tr>
+        </div>        
+        <p>Date de naissance: {{col.dateNaissance}}</p>
+        <p>Email: {{col.email}}</p>
+    </div>
+
+    <span><a [routerLink]="" (click)="newCollegue()" >Créer un nouveau collegue</a></span>
+    <button (click)="modify()">Modifier</button>
+</div>
+

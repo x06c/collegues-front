@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import collegueMock from '../mock/collegues.mock';
 import { Collegue } from '../models/collegue';
 
 @Component({
@@ -8,11 +9,21 @@ import { Collegue } from '../models/collegue';
 })
 export class CollegueComponent implements OnInit {
 
-  col!: Collegue
+  @Input() col!: Collegue;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void{
+    
+    this.col = collegueMock;
+  }
+
+  modify() {
+    console.log("click click click modification collègue");
+  }
+
+  newCollegue() {
+    console.log("Un collègue va être créer !")
   }
 
 }

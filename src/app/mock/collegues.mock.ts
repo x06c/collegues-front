@@ -1,8 +1,12 @@
-let collegueMock = {
-    matricule: "Toto",
+import { Collegue } from "../models/collegue";
+
+let collegueMock: Collegue = {
+    matricule: "4efjd89",
     nom: "Toto",
-    prenoms: "leprenom",
+    prenoms: ["leprenom1", 'leprénom2'],
     email: "toto@mail.fr",
-    dateNaissance: new Date('July 28, 2021 15:24:32'),
+    dateNaissance: new Date(Date.UTC(1985,4,11)),
     photoUrl: "maPhoto.jpg"
 }
+
+export default collegueMock;
